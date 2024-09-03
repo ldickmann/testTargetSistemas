@@ -51,7 +51,6 @@ a) Usar o json ou xml disponível como fonte dos dados do faturamento mensal;
 b) Podem existir dias sem faturamento, como nos finais de semana e feriados.
 Estes dias devem ser ignorados no cálculo da média;"""
 
-
 import json
 
 
@@ -69,7 +68,7 @@ def calc_faturamento(lista):
 
 with open('faturamento.json', 'r') as file:
 	faturamento_lista = json.load(file)
-	
+
 menor_faturamento, maior_faturamento, dias_acima_media_fat = calc_faturamento(faturamento_lista)
 
 print(f'O menor valor de faturamento ocorrido na distribuidora foi R$: {menor_faturamento}')
@@ -77,7 +76,6 @@ print(f'Maior valor de faturamento da distribuidora for de R$: {maior_faturament
 print(f'Dias com faturamento acima da média: {dias_acima_media_fat}')
 
 print('####################################################################')
-
 
 """4) Dado o valor de faturamento mensal de uma distribuidora, detalhado por estado:
 • SP – R$67.836,43
@@ -118,7 +116,7 @@ def inverter_string(s):
 	
 	for char in s:
 		pilha.append(char)
-		
+	
 	string_invertida = ""
 	while pilha:
 		string_invertida += pilha.pop()
@@ -130,3 +128,7 @@ if __name__ == "__main__":
 	entrada = input("Digite uma string para inverter: ")
 	resultado = inverter_string(entrada)
 	print("String invertida:", resultado)
+
+
+"""Criei o arquivo "atualizaçãoTeste.py" para realizar o item 3 com o arquivo "dados.json" recebido.
+Pois já tinha finalizado o teste."""
